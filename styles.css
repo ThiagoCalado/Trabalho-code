@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+:root {
+    --main-color:#8217da;
+}
+
+*{
+    box-sizing: border-box;
+    outline: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #8217da;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 1.5rem;
+    /*border: solid #df0808 3px;*/
+    border-radius: 1.2rem;
+}
+
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: .5rem;
+
+}
+
+form input{
+    font-size: 1rem;
+    height: 2rem;
+    padding: .2rem;
+}
+
+form input:focus{
+    outline: 1px solid #3521e0;
+}
+
+form button{
+    border: none;
+    background: #7970ca;
+    color: aliceblue;
+    font-size: 1.8rem;
+    font-weight: 200;
+    height: 3rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+}
+
+form button:hover{
+    background: red;
+}
