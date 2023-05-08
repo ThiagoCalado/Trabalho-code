@@ -7,7 +7,9 @@ function pegarInfos() {
         evento.preventDefault();
         const altura = form.querySelector('#altura');
         const peso = form.querySelector('#peso');
-        const imc = peso / (altura * altura);
+        const calaltura = Number(altura.value);
+        const calpeso = Number(peso.value);
+        const imc = calpeso / calaltura ** 2;
 
         if (imc < 24) {
             console.log("peso esta normal");
@@ -27,11 +29,10 @@ function pegarInfos() {
         else if (imc > 40) {
             console.log('esta com Obesos: Classe III');
         }
-        resultado = imc
+
+        resultado.innerHTML = `${imc.toFixed(2)}`
         
-        console.log(resultado)
-        
-    }
+    };
 
     form.addEventListener('submit', recebeEvento);
 }
