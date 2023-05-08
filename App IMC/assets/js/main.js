@@ -27,6 +27,9 @@ function pegarInfos() {
         else if (imc > 40) {
             console.log('esta com Obesos: Classe III');
         }
+        resultado = imc
+        
+        console.log(resultado)
         
     }
 
