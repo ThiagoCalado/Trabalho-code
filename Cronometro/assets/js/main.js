@@ -27,6 +27,7 @@ iniciar.addEventListener('click', (e)=>{
 
 pausar.addEventListener('click', (e)=>{
     clearInterval(timer);
+    relogio.classList.add('pausa')
 })
 
 zerar.addEventListener('click', (e)=>{
