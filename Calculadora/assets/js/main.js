@@ -53,6 +53,12 @@ function criaCalculadora(){
                 this.display.focus();
             })
         },
+        
+        pressEnter() {
+                    this.display.addEventListener('keyup', (e) => {
+                        if (e.key === 'Enter') {
+                            this.realizarConta();
+
 
         mostraNoDisplay(valor){
             this.display.value += valor;
