@@ -13,11 +13,32 @@ class ValidaFormulario{
     manipulaSubmit(e){
         e.preventDefault();
         const camposValidos = this.camposSaoValidos();
+        const senhasValidas = this.senhasSaoValidas();
 
-        if (camposValidos) {
+        if (camposValidos && senhasValidas) {
             alert('Formulario enviado');
             this.formulario.submit();
         }
+    }
+
+    senhasSaoValidas(){
+        let valid = false;
+
+        const senha = this.formulario.querySelector('.senha');
+        const repetirSenha = this.formulario.querySelector('.repetir-senha');
+
+        if (senha.value !== repetirSenha.value) {
+            valid = false;
+            this.criaErro(senha, 'Campo senha e repetir senha precisam ser iguais');
+            this.criaErro(repetirSenha, 'Campo repetir senha e senha precisam ser iguais');
+        }
+
+        if (senha.value.length < 6 || senha.value.length > 12) {
+            valid = false
+            this.criaErro(senha, 'senha precisa estar entre 6 e 12 caracteres');
+        }
+
+        return valid;
     }
 
     camposSaoValidos(){
